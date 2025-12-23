@@ -23,6 +23,9 @@ source .venv/bin/activate
 
 # 安装依赖
 uv sync
+
+# 复制配置文件
+cp config.example.toml config.toml
 ```
 
 ## 使用方法
@@ -75,13 +78,13 @@ timeout = 10
 [[users]]
 username = "your_username"
 password = "your_password"
-ip = "10.255.255.100"
+ip = "auto"      # 自动获取本机IP地址
 channel = "3"    # 1=校园网, 2=移动, 3=电信, 4=联通
 
 [[users]]
 username = "another_username"
 password = "another_password"
-ip = "10.255.255.101"
+ip = "10.255.255.101"  # 指定IP地址
 channel = "2"
 ```
 
