@@ -1,0 +1,28 @@
+# 校园网自动登录配置文件示例
+#
+# 使用方法:
+#   1. 复制此文件为 config.toml
+#   2. 修改下面的用户信息
+#   3. 运行登录程序
+
+# 全局设置
+[settings]
+# 请求超时时间（秒）
+timeout = 10
+
+# 用户列表
+# 每次登录时会选择其中一个用户（默认第一个，使用 -r 参数随机选择）
+# ip 设为 "auto" 可自动获取本机IP地址
+
+[[users]]
+username = "your_username"
+password = "your_password"
+ip = "auto"
+channel = "3"    # 1=校园网, 2=中国移动, 3=中国电信, 4=中国联通
+
+# 可以添加更多用户
+# [[users]]
+# username = "another_username"
+# password = "another_password"
+# ip = "auto"
+# channel = "2"
